@@ -1,6 +1,5 @@
 package com.example.rxjava.demo2;
 
-
 /*
 * 被观察者的顶层接口
 * */
