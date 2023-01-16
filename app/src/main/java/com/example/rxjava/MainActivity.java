@@ -2,7 +2,10 @@ package com.example.rxjava;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.rxjava.demo2.ObserverActivity;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -18,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        test1();
+        Intent intent = new Intent(MainActivity.this, ObserverActivity.class);
+        startActivity(intent);
+        //test1();
     }
     private void test1(){
         //主动创建事件（被观察者）

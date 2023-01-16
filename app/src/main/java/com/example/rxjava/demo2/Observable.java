@@ -15,4 +15,8 @@ public abstract class Observable<T> implements ObservableSource<T> {
     }
 
     protected abstract void subscribeActual(Observer observer);
+
+    public static <T>  Observable<T> create(ObservableOnSubscribe<T> source){
+        return new ObservableCreate<T>(source);
+    }
 }
